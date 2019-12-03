@@ -20,7 +20,7 @@ notesCtrl.createNote = async (req, res) => {
 
 notesCtrl.updateNote = async (req, res) => {
   const newdata = req.body;
-  await Note.findByIdAndUpdate(req.params.id, newdata);
+  await Note.findOneAndUpdate({ _id: req.params.id }, newdata);
   res.json({ message: "Note updated" });
 };
 

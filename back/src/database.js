@@ -5,7 +5,8 @@ const URI = "mongodb://localhost/mern-notes";
 mongoose.connect(URI, {
   useNewUrlParser: true,
   useCreateIndex: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
+  useFindAndModify: true
 });
 
 const connection = mongoose.connection;
